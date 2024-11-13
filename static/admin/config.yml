@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: arunavachatterjee-13427/saas-documentation
+  branch: main
+  base_url: https://api.github.com
+
+# These lines should match your Docusaurus configuration
+site_url: https://arunavachatterjee-13427.github.io
+display_url: https://arunavachatterjee-13427.github.io/saas-documentation
+
+# Media and public folders
+media_folder: "static/img"
+public_folder: "/img"
+
+# Collections define the structure for content editing
+collections:
+  - name: "docs"
+    label: "Documentation"
+    folder: "docs"
+    create: true
+    nested:
+      depth: 100
+      summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sidebar Label", name: "sidebar_label", widget: "string" }
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "batch-processing"
+    label: "Batch Processing"
+    folder: "docs/batch-processing"
+    create: true
+    nested:
+      depth: 100
+      summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sidebar Label", name: "sidebar_label", widget: "string" }
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Flow Diagram",
+          name: "flowDiagram",
+          widget: "text",
+          required: false,
+        }
+
+  - name: "on-demand"
+    label: "On-Demand Processing"
+    folder: "docs/on-demand"
+    create: true
+    nested:
+      depth: 100
+      summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sidebar Label", name: "sidebar_label", widget: "string" }
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Flow Diagram",
+          name: "flowDiagram",
+          widget: "text",
+          required: false,
+        }

@@ -5,10 +5,15 @@
     "paths": {
       "@site/*": ["./*"]
     },
-    "strict": true,
+    "moduleResolution": "node",
+    "allowJs": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "jsx": "react",
+    "lib": ["DOM", "ESNext"],
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true
   },
-  "include": ["src/", "docs/", "docusaurus.config.ts"]
+  "include": ["src/", "docs/", "docusaurus.config.ts", "sidebars.ts"],
+  "exclude": ["node_modules", "build", ".docusaurus", "babel.config.js"]
 }
